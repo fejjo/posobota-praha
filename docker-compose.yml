@@ -10,3 +10,11 @@ services:
     volumes:
       - ./:/code
     command: /bin/bash  # a hned sa mi pusti bash
+
+  xdebug:
+      image: posobota/hello-world-xdebug
+      build:
+        context: .
+        dockerfile: docker/xdebug/Dockerfile
+      volumes:
+        - ./:/code
