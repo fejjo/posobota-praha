@@ -1,0 +1,12 @@
+version: '2'
+services:
+
+  app:
+    build: .
+    image: posobota/hello-world
+
+  dev: #podla nazvu sa mozem pripojit na kontainer docker-compose run dev
+    image: posobota/hello-world
+    volumes:
+      - ./:/code
+    command: /bin/bash  # a hned sa mi pusti bash
